@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.calcBody {
+  width: 300px;
+  /*max-width: 80%;*/
+  height: 450px;
+  overflow: hidden;
+  background: #505658;
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow: 3px 5px 1px #414141, 2px 2px 1px #414141;
+}
+.calcBody .logo {
+  font-family: 'Fleur De Leah', cursive;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 2.2em;
+  background-color: black;
+  -webkit-text-stroke: 0.5px white;
+  animation: logoanimate 5s linear infinite;
+  text-shadow:
+  0 0 1px #fff,
+  0 0 1px #fff,
+  0 0 1px #fff;
+}
+@keyframes logoanimate {
+  0% {
+    color: red;
+  }
+  33% {
+    color: green;
+  }
+  66% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
+}
+.logo span.h {
+  font-family: 'Carattere', cursive;
+  font-size: 0.9em;
+}
+.calcBody span.creation {
+  font-size: 0.8em;
+  font-family: 'Carattere', cursive;
+  font-weight: 900;
+  animation: creation 5s linear infinite;
+}
+@keyframes creation {
+  0% {
+    color: green;
+  }
+  33% {
+    color: blue;
+  }
+  66% {
+    color: red;
+  }
+  100% {
+    color: green;
+  }
+}
+
+#display {
+  background-color: black;
+  padding-bottom: 20px;
+  box-shadow: 0 0 5px black;
+}
+
+#dispoutput {
+  width: 92%;
+  text-align: right;
+  margin: auto;
+  display: block;
+  padding: 3px 6px;
+  font-size: 38px;
+  outline: none;
+  border: none;
+  color: black;
+  background-color: #c4c6c6;
+}
+#dispoutput::placeholder {
+  color: black;
+}
+
+.buttons {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(5, 50px);
+  grid-gap: 10px;
+  margin: 10px;
+  font-weight: 900;
+}
+
+.btn {
+  padding: 0.8rem;
+  font-size: 20px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 3px 0 black, 2px 2px 0 black;
+}
+
+.btn:active {
+  box-shadow: none;
+  background-color: #575757;
+  transform: translate(2px, 3px);
+  transition: transform 50ms;
+}
